@@ -48,14 +48,10 @@ dotnet ef migrations add SeedData
 dotnet ef database update
 ```
 
-### 5. Launch the project in your browser
+### 5. Launch the project 
 In your terminal, type:
 ```sh
 dotnet watch run
-```
-Hold ```command``` while clicking the link in your local terminal to your local address, which should be:
-```sh
-http://127.0.0.1:5000
 ```
 
 ## API Endpoints
@@ -90,7 +86,7 @@ https://localhost:5000/api/cats/?name=maddie&traits=noisey&age=3&gender=female
 
 ### Dogs
 
-Interact with the data for reviews that users left for different locations.
+Access log of current dogs in the animal shelter.
 
 #### HTTP Requests
 ```sh
@@ -113,8 +109,10 @@ DELETE /api/dogs/{id}
 ```sh
 https://localhost:5000/api/dogs/?name=rolf&traits=feisty&age=8&gender=male
 ```
+### Utilizing NSwag 
 
-
+To explore Animal Shelter API with NSwag, launch the program (see step 5) and input the following link in your browser:
+http://localhost:5000/swagger
 
 ## Known Bugs
 
