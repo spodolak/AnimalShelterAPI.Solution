@@ -20,9 +20,17 @@ namespace AnimalShelter
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AnimalShelterContext>(opt =>
-                opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+          services.AddDbContext<AnimalShelterContext>(opt =>
+              opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+          services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+          services.AddApiVersioning(config =>
+          {
+              // Specify the default API Version as 1.0
+              config.DefaultApiVersion = new ApiVersion(2, 1);
+              // If the client hasn't specified the API version in the request, use the default API version number 
+              config.AssumeDefaultVersionWhenUnspecified = true;
+              config.ReportApiVersions = true;
+          });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
