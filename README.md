@@ -23,11 +23,12 @@ Enter the command ``dotnet tool install -g dotnet-script`` in Terminal (macOS) o
 
 ### 2. Clone this repository
 
-Enter the following commands in Terminal (macOS) or PowerShell (Windows):
+Enter the following commands in Terminal (macOS) or PowerShell (Windows):<br>
+Note: Terminal may require Git Bash extension to utilize Git commands 
 ```sh
 cd desktop
-git clone https://github.com/spodolak/AnimalShelter.Solution
-cd AnimalShelter.Solution
+git clone https://github.com/spodolak/AnimalShelterAPI.Solution
+cd AnimalShelterAPI.Solution
 ```
 ### 3. Install all necessary packages and make sure the project will build
 In your terminal, type the following commands to make sure all necessary packages are included in the project and to launch in your browser:
@@ -38,21 +39,24 @@ dotnet build
 ```
 
 ### 4. Update the database and tables
+Note: Program assumes MySQL Workbench is installed locally. [Please follow these instructions for installation.](https://dev.mysql.com/downloads/workbench/) <br>
 Enter the following to update your database and tables for the program:
 ```sh
-dotnet ef database update
-```
-If you'd like to add seed data to start project, enter the following: (This step is optional)
-```sh
-dotnet ef migrations add SeedData
 dotnet ef database update
 ```
 
 ### 5. Launch the project 
 In your terminal, type:
 ```sh
-dotnet watch run
+dotnet run
 ```
+### 6. Explore Endpoints 
+#### Utilizing NSwag 
+
+To explore Animal Shelter API with NSwag, launch the project and input the following link in your browser:
+http://localhost:5000/swagger
+
+Otherwise see documentation below
 
 ## API Endpoints
 _Once you have installed this program, you can use these endpoints on your local host in your browser._
@@ -109,10 +113,6 @@ DELETE /api/dogs/{id}
 ```sh
 https://localhost:5000/api/dogs/?name=rolf&traits=feisty&age=8&gender=male
 ```
-### Utilizing NSwag 
-
-To explore Animal Shelter API with NSwag, launch the program (see step 5) and input the following link in your browser:
-http://localhost:5000/swagger
 
 ## Known Bugs
 
