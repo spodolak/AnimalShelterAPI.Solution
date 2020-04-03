@@ -23,6 +23,13 @@ namespace AnimalShelter.Controllers
       return _db.Cats.ToList();
     }
 
+    // GET api/cats/5
+    [HttpGet("{id}")]
+    public ActionResult<Cat> Get(int id)
+    {
+      return _db.Cats.FirstOrDefault(entry => entry.CatId == id);
+    }
+
     // POST api/cats
     [HttpPost]
     public void Post([FromBody] Cat cat)
