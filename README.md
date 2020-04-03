@@ -128,6 +128,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _C#_
 * _.NET Core 2.2_
 * _ASP.NET Core MVC_
+* _ASP.NET Core MVC Versioning 4.1.1_
 * _MySQL 2.2.0_
 * _EF Core 2.2.0_
 * _Razor 2.2.0_
