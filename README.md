@@ -1,4 +1,4 @@
-# _Animal Shelter API_
+# _Animal Shelter API (Version 2.1)_
 
 #### By _**Steph Podolak**_
 
